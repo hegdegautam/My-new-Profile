@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Portfolio Website
 
-# Run and deploy your AI Studio app
+## 1. Setup
+This project uses **Vite** and **React**.
+To get started, open your terminal (Command Prompt or Terminal) in this folder and run:
 
-This contains everything you need to run your app locally.
+```bash
+npm install
+```
 
-View your app in AI Studio: https://ai.studio/apps/drive/1TYxAUw_l_Z_l6tn-Xo7z1M5x5gfMDEHD
+## 2. Testing Locally
+To see the website on your computer before publishing:
+```bash
+npm run dev
+```
+Open the link shown (usually `http://localhost:5173`).
 
-## Run Locally
+## 3. Deployment (Publishing to GitHub Pages)
 
-**Prerequisites:**  Node.js
+### Using the Automated Script (Recommended)
+1. Commit all your changes using **GitHub Desktop**.
+2. Push the changes to your GitHub repository.
+3. Open your terminal in this folder and run:
+   ```bash
+   npm run deploy
+   ```
+   *This command builds the website and pushes it to a special `gh-pages` branch on GitHub.*
 
+4. Go to your repository settings on GitHub -> **Pages**.
+5. Ensure the "Source" is set to **Deploy from a branch**.
+6. Select the **`gh-pages`** branch and save.
+7. Your website will be live at the link provided by GitHub!
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Note for GitHub Desktop
+GitHub Desktop is great for managing your code (step 1 & 2), but the `npm run deploy` command handles the specific "building" of the static site required for the web.
